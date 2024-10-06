@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_FILES 100//LimIt cause nobody seein
+#define MAXFILES 100//LimIt cause nobody seein
 
-char fileNames[MAX_FILES][100];
+char fileNames[MAXFILES][100];
 int fileCount = 0;//counting of the files
 
 void addtxt(char *filename) //this adds .txt after every filename because mai dalna bhul gya
@@ -19,7 +19,7 @@ void createF() {//this creates a file
     FILE *file;
     char filename[100];
     
-    if (fileCount >= MAX_FILES) //limit ke ANDAR
+    if (fileCount >= MAXFILES) //limit ke ANDAR
     {
         printf("Error: Maximum file limit reached. Cannot create more files.\n");
         return;
