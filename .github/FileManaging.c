@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAXFILES 100//LimIt cause nobody seein
+#define maxfiles 100          //Limit cause nobody seein
 
-char fileNames[MAXFILES][100];
-int fileCount = 0;//counting of the files
+char fileNames[maxfiles][100];
+int fileCount = 0;           //counting of the files
 
 void addtxt(char *filename) //this adds .txt after every filename because mai dalna bhul gya
 {
@@ -15,11 +15,11 @@ void addtxt(char *filename) //this adds .txt after every filename because mai da
     }
 }
 
-void createF() {//this creates a file
+void createF() {      //this creates a file
     FILE *file;
     char filename[100];
     
-    if (fileCount >= MAXFILES) //limit ke ANDAR
+    if (fileCount >= maxfiles) //limit ke ANDAR
     {
         printf("Error: Maximum file limit reached. Cannot create more files.\n");
         return;
@@ -37,10 +37,10 @@ void createF() {//this creates a file
         return;
     }
     
-    strcpy(fileNames[fileCount], filename);//basically copy karta hai
+    strcpy(fileNames[fileCount], filename);     //basically copy karta hai
     fileCount++;
     
-    printf("File created successfully: %s\n", filename);//hogya
+    printf("File created successfully: %s\n", filename);   //hogya
     fclose(file);
 }
 
@@ -90,7 +90,7 @@ void appendF() //content add karne ke liye koi file mai
     printf("Content appended to file: %s\n", filename);
 }
 
-void readF() //padhega likhega tabhi to badega
+void readF() //padhega india tabhi to badega india
 {
     FILE *file;
     char filename[100];
@@ -115,7 +115,7 @@ void readF() //padhega likhega tabhi to badega
     fclose(file);
 }
 
-void deleteF() //delete
+void deleteF() //delete obviously
 {
     char filename[100];
     printf("\nEnter the name of the file to delete: ");
